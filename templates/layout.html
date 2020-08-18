@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="\static\styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <link href="/static/popcorn.ico" rel="icon">
+    <title>FilmBrew - {% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    <div style="margin: auto; margin-top: 10px; font-family: 'DM Mono', monospace;">
+        <a style="color: rgb(0, 119, 255);" href="/">
+            <h1 style="text-align: center;">FilmBrew</h1>
+        </a>
+    </div>
+    </nav>
+    <main style="font-family: 'DM Mono:wght@300', monospace;">
+        <div style="margin: auto; margin-top: 10px;">
+            Welcome to FilmBrew! <br> Brew a film according to your own taste!
+        </div>
+        <div style="margin: auto; margin-top: 12px;">
+            {% block main %} {% endblock %}
+        </div>
+
+    </main>
+</body>
+
+<footer
+    style="margin: auto; margin-top: 10px; font-family: 'DM Mono:wght@100', monospace; text-align: center; font-size: small; color: grey;">
+    <br><br><br><br>
+    <p>Muhammad Daniyal - CS50 Final Project</p>
+</footer>
+
+</html>

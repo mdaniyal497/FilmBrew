@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Genre
+{% endblock %}
+
+{% block main %}
+<br>
+<form name="genreform" action="/genre" method="POST">
+  <div class="form-group" style="margin: auto;">
+    <label for="genre">Choose a genre or two! <br>"Make sure you write in alphabetical order i.e. comedy, drama (not
+      drama, comedy)". </label> <br>
+    <input name="genre" type="text" class="form-control" id="genre" placeholder="Genre" required><br>
+    <br><br>
+    <label for="rating">Specify minimum rating!</label> <br>
+    <input name="rating" type="number" class="form-control" id="rating" placeholder="Rating" required><br>
+    <button style='margin: 10px;' type="submit" class=" btn btn-outline-dark">Brew</button><br>
+
+  </div>
+</form>
+{% endblock %}

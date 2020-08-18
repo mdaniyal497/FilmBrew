@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Brewed
+{% endblock %}
+
+{% block main %}
+<br>
+<div style="margin: auto; border-width: 0px;" class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img style="width: 182px; height: 268px;" src={{image}} class="card-img" alt={{title}}>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h4 class="card-title">{{title}} ({{year}})</h4>
+                <p class="card-text">{{summary}}<br></p>
+                <span class="imdbRatingPlugin" data-user="ur79320194" data-title={{tconst}} data-style="p2"><a
+                        href="https://www.imdb.com/title/tt0436772/?ref_=plg_rt_1">
+                        <img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png"
+                            alt={{title}} /></a></span>
+                <script>
+                    (function (d, s, id) {
+                        var js, stags = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {
+                            return;
+                        }
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+                        stags.parentNode.insertBefore(js, stags);
+                    })(document, "script", "imdb-rating-api");
+                </script>
+                <p class="card-text"><small class="text-muted"><a href="https://www.imdb.com/title/{{tconst}}">View on
+                            IMDb</a></small></p>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/"><button type="button" class="btn btn-outline-dark">Brew Again</button></a> <br>
+{% endblock %}
