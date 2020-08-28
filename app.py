@@ -1,13 +1,8 @@
-import hashlib
-import binascii
-import os
 import string
 
 import sqlite3
 import random
-import re
-from flask import Flask, redirect, render_template, request
-from tempfile import mkdtemp
+from flask import Flask, render_template, request
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 
 from helper import get_image, get_summary
