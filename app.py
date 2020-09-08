@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 conn = sqlite3.connect(
-    'database.db', isolation_level=None, check_same_thread=False)
+    "D:\\Projects\\FilmBrew - Flask App\\FilmBrew - Flask App\\database.db", isolation_level=None, check_same_thread=False)
 db = conn.cursor()
 
 
@@ -70,7 +70,11 @@ def genre():
         return render_template("brewed.html", tconst=tconst, title=title, year=year, image=image, summary=summary)
 
     else:
-        return render_template("genre.html")
+        db.execute("SELECT DISTINCT genres FROM movies GROUP BY genres")
+        l_genres = db.fetchall()
+        l_genres = sorted(l_genres)
+
+        return render_template("genre.html", l_genres=l_genres)
 
 
 @app.route("/brewed2")
