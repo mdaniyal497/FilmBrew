@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 conn = sqlite3.connect(
-    "D:\\Projects\\FilmBrew - Flask App\\FilmBrew - Flask App\\database.db", isolation_level=None, check_same_thread=False)
+    "database.db", isolation_level=None, check_same_thread=False)
 db = conn.cursor()
 
 
